@@ -107,19 +107,19 @@ ll pquery(int node, int start, int end, int l, int r)
 
   void update(int l,int r,int val){
 
-  updateRange(1,0,N-1,l,r,val);
+  updateRange(1,0,N-1,l-1,r-1,val);
 
   }
   
   void update(int idx,int val){
 
-  Update(1,0,N-1,idx,val);
+  Update(1,0,N-1,idx-1,val);
 
   }
   
    ll query(int l,int r){
 
-   return pquery(1,0,N-1,l,r);
+   return pquery(1,0,N-1,l-1,r-1);
 
    }
  };
